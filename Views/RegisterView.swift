@@ -1,11 +1,12 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State private var username = ""
+    @State private var name = ""
     @State private var phoneNumber = ""
     @State private var email = ""
     @State private var address = ""
     @State private var password = ""
+    @State private var confirmPassword = ""
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -13,7 +14,7 @@ struct RegisterView: View {
             Text("Registration")
                            .font(.largeTitle)
                            .padding(.bottom, 20)
-            TextField("Username", text: $username)
+            TextField("Name", text: $name)
                 .padding()
                 .background(Color(.systemGray6))
                 .cornerRadius(5.0)
@@ -42,6 +43,12 @@ struct RegisterView: View {
                 .background(Color(.systemGray6))
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
+            SecureField("Confirm Password", text: $confirmPassword)
+                .padding()
+                .background(Color(.systemGray6))
+                .cornerRadius(5.0)
+                .padding(.bottom, 20)
+            
             
             Button(action: {
                 // Perform registration logic here
@@ -68,4 +75,7 @@ struct RegisterView: View {
         .padding()
         
         }
+}
+#Preview{
+    RegisterView()
 }

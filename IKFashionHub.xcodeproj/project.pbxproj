@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B48AAEE2BB567B000F3A9E5 /* CartIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAED2BB567B000F3A9E5 /* CartIcon.swift */; };
+		1B48AAF02BB56B2A00F3A9E5 /* ClothingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAEF2BB56B2A00F3A9E5 /* ClothingIcon.swift */; };
+		1B48AAF22BB56DBE00F3A9E5 /* ClothDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAF12BB56DBE00F3A9E5 /* ClothDataModel.swift */; };
+		1B48AAF42BB5762C00F3A9E5 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAF32BB5762C00F3A9E5 /* CartViewModel.swift */; };
+		1B48AAF62BB58C8800F3A9E5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAF52BB58C8800F3A9E5 /* HomeView.swift */; };
+		1B48AAF82BB58DB900F3A9E5 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAF72BB58DB900F3A9E5 /* ProductViewModel.swift */; };
+		1B48AAFA2BB58F3800F3A9E5 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAF92BB58F3800F3A9E5 /* CartModel.swift */; };
+		1B48AAFC2BB58F6C00F3A9E5 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAFB2BB58F6C00F3A9E5 /* CartView.swift */; };
 		424907B22BAE11F1000733A6 /* IKFashionHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424907B12BAE11F1000733A6 /* IKFashionHubApp.swift */; };
 		424907B42BAE11F1000733A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424907B32BAE11F1000733A6 /* ContentView.swift */; };
 		424907B62BAE11F3000733A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424907B52BAE11F3000733A6 /* Assets.xcassets */; };
@@ -40,6 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B48AAED2BB567B000F3A9E5 /* CartIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartIcon.swift; sourceTree = "<group>"; };
+		1B48AAEF2BB56B2A00F3A9E5 /* ClothingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingIcon.swift; sourceTree = "<group>"; };
+		1B48AAF12BB56DBE00F3A9E5 /* ClothDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothDataModel.swift; sourceTree = "<group>"; };
+		1B48AAF32BB5762C00F3A9E5 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		1B48AAF52BB58C8800F3A9E5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1B48AAF72BB58DB900F3A9E5 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		1B48AAF92BB58F3800F3A9E5 /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
+		1B48AAFB2BB58F6C00F3A9E5 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		424907AE2BAE11F1000733A6 /* IKFashionHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKFashionHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		424907B12BAE11F1000733A6 /* IKFashionHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKFashionHubApp.swift; sourceTree = "<group>"; };
 		424907B32BAE11F1000733A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,9 +99,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B48AAEC2BB5676B00F3A9E5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1B48AAED2BB567B000F3A9E5 /* CartIcon.swift */,
+				1B48AAEF2BB56B2A00F3A9E5 /* ClothingIcon.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		424907A52BAE11F0000733A6 = {
 			isa = PBXGroup;
 			children = (
+				1B48AAEC2BB5676B00F3A9E5 /* Components */,
 				424907DE2BAE126C000733A6 /* ViewModels */,
 				424907DD2BAE1260000733A6 /* Views */,
 				424907DB2BAE122C000733A6 /* Models */,
@@ -147,6 +173,8 @@
 			children = (
 				424907E32BAE1335000733A6 /* LoginModel.swift */,
 				424907E92BAE1E6F000733A6 /* RegisterModel.swift */,
+				1B48AAF12BB56DBE00F3A9E5 /* ClothDataModel.swift */,
+				1B48AAF92BB58F3800F3A9E5 /* CartModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,6 +184,8 @@
 			children = (
 				424907E12BAE1314000733A6 /* LoginView.swift */,
 				424907E52BAE182B000733A6 /* RegisterView.swift */,
+				1B48AAF52BB58C8800F3A9E5 /* HomeView.swift */,
+				1B48AAFB2BB58F6C00F3A9E5 /* CartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +195,8 @@
 			children = (
 				424907DF2BAE12FF000733A6 /* LoginViewModel.swift */,
 				424907E72BAE1E44000733A6 /* RegisterViewModel.swift */,
+				1B48AAF32BB5762C00F3A9E5 /* CartViewModel.swift */,
+				1B48AAF72BB58DB900F3A9E5 /* ProductViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -299,13 +331,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B48AAFA2BB58F3800F3A9E5 /* CartModel.swift in Sources */,
+				1B48AAF82BB58DB900F3A9E5 /* ProductViewModel.swift in Sources */,
+				1B48AAF42BB5762C00F3A9E5 /* CartViewModel.swift in Sources */,
+				1B48AAF02BB56B2A00F3A9E5 /* ClothingIcon.swift in Sources */,
+				1B48AAF62BB58C8800F3A9E5 /* HomeView.swift in Sources */,
 				424907E42BAE1335000733A6 /* LoginModel.swift in Sources */,
 				424907E82BAE1E44000733A6 /* RegisterViewModel.swift in Sources */,
 				424907B42BAE11F1000733A6 /* ContentView.swift in Sources */,
+				1B48AAF22BB56DBE00F3A9E5 /* ClothDataModel.swift in Sources */,
 				424907B22BAE11F1000733A6 /* IKFashionHubApp.swift in Sources */,
+				1B48AAEE2BB567B000F3A9E5 /* CartIcon.swift in Sources */,
 				424907EA2BAE1E6F000733A6 /* RegisterModel.swift in Sources */,
 				424907E62BAE182B000733A6 /* RegisterView.swift in Sources */,
 				424907E22BAE1314000733A6 /* LoginView.swift in Sources */,
+				1B48AAFC2BB58F6C00F3A9E5 /* CartView.swift in Sources */,
 				424907E02BAE12FF000733A6 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

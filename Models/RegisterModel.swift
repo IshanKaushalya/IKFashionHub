@@ -1,5 +1,5 @@
 struct registerUser{
-    var username : String
+    var name : String
     var phonenumber : String
     var email : String
     var homeaddress : String
