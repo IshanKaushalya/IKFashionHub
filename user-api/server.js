@@ -18,9 +18,9 @@ connection.connect(err => {
 
 
 // This assumes you have a `sub_category` field in your `product` table.
-app.get('/api/subcategories/:category', (req, res) => {
+app.get('/api/subCategory/:category', (req, res) => {
     const { category } = req.params;
-    const sql = 'SELECT DISTINCT sub_category FROM product WHERE category = ?';
+    const sql = 'SELECT DISTINCT subCategory FROM Products WHERE category = ?';
     connection.query(sql, [category], (error, results) => {
         if (error) {
             return res.status(500).json({ error: 'Database error', details: error });
@@ -32,44 +32,41 @@ app.get('/api/subcategories/:category', (req, res) => {
 
 
 
-// Endpoint to get product variants by product ID
-app.get('/api/productVariants/:productId', (req, res) => {
-    const { productId } = req.params;
-    const sql = 'SELECT * FROM ProductVariants WHERE product_id = ?';
-    connection.query(sql, [productId], (error, results) => {
-        if (error) {
-            return res.status(500).json({ error: 'Database error', details: error });
-        }
-        res.json(results);
-    });
-});
+// // Endpoint to get product variants by product ID
+// app.get('/api/productVariants/:productId', (req, res) => {
+//     const { productId } = req.params;
+//     const sql = 'SELECT * FROM ProductVariants WHERE product_id = ?';
+//     connection.query(sql, [productId], (error, results) => {
+//         if (error) {
+//             return res.status(500).json({ error: 'Database error', details: error });
+//         }
+//         res.json(results);
+//     });
+// });
 
 
 
 
 
 // Endpoint to get all distinct categories
-app.get('/api/categories', (req, res) => {
-    const sql = 'SELECT DISTINCT category FROM product';
+app.get('/api/category', (req, res) => {
+    const sql = 'SELECT DISTINCT product_category FROM products';
     connection.query(sql, (error, results) => {
         if (error) {
             return res.status(500).json({ error: 'Database error' });
         }
         // Extract categories from the results
-        const categories = results.map(row => row.category);
-        res.json(categories);
+        const product_category = results.map(row => row.product_category);
+        res.json(product_category);
     });
 });
 
 
 
-
-
-
 // Endpoint to get products by category
-app.get('/api/products/:category', (req, res) => {
+app.get('/api/Products/:category', (req, res) => {
     const { category } = req.params;
-    const sql = 'SELECT * FROM product WHERE category = ?';
+    const sql = 'SELECT * FROM Products WHERE category = ?';
     connection.query(sql, [category], (error, results) => {
         if (error) {
             return res.status(500).json({ error: 'Database error' });
@@ -78,6 +75,19 @@ app.get('/api/products/:category', (req, res) => {
     });
 });
 
+
+
+// Endpoint to get products by category
+app.get('/api/Products', (req, res) => {
+    const { category } = req.params;
+    const sql = 'SELECT * FROM Products';
+    connection.query(sql, (error, results) => {
+        if (error) {
+            return res.status(500).json({ error: 'Database error' });
+        }
+        res.json(results);
+    });
+});
 
 
 // Register user
@@ -145,6 +155,28 @@ app.post('/api/cart', (req, res) => {
     });
 });
 
+
+
+
+
+
+// Endpoint to get products by subcategory within a category
+app.get('/api/products/:category/:subcategory', (req, res) => {
+    let { category, subcategory } = req.params;
+
+    // Convert category and subcategory to the case used in the database.
+    category = category.charAt(0).toUpperCase() + category.slice(1).toLowerCase();
+    subcategory = subcategory.toLowerCase();
+
+    const sql = 'SELECT * FROM products WHERE category = ? AND subCategory = ?';
+
+    connection.query(sql, [category, subcategory], (error, results) => {
+        if (error) {
+            return res.status(500).json({ error: 'Database error', details: error });
+        }
+        res.json(results);
+    });
+});
 
 
 const PORT = process.env.PORT || 3030;
