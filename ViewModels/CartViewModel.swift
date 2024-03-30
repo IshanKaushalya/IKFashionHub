@@ -6,19 +6,19 @@
 //
 
 import Foundation
-import SwiftUI
 
-class CartViewModel : ObservableObject{
-    @Published private(set) var items : [ClothDataModel] = []
-    @Published private(set) var total : Double = 0.00
+class CartVeiwModel: ObservableObject {
     
-    func addtoCart(item : ClothDataModel){
-        items.append(item)
-        total += item.price
-    }
+    @Published private(set) var products: [ClothDataModel] = []
+    @Published private(set) var total: Double = 0
     
-    func removeItemFromCart(item : ClothDataModel){
-        items = items.filter {$0.clothID != item.clothID}
-        total -= item.price
+    func addToCart(product: ClothDataModel) {
+        products.append(product)
+        total += product.price
     }
-}
+        func removeFromCart(product: ClothDataModel) {
+            products = products.filter { $0.id != product.id }
+            total -= product.price
+        }
+        
+    }

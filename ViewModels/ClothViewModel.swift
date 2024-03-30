@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-class ProductViewModel: ObservableObject {
+class ClothViewModel: ObservableObject {
     
     @Published var clothingDM = [ClothDataModel]()
     
@@ -49,7 +49,7 @@ class ProductViewModel: ObservableObject {
                 return
             }
             
-            if let decodedResponse = try? JSONDecoder().decode([ProductDataModel].self, from: data) {
+            if let decodedResponse = try? JSONDecoder().decode([ClothDataModel].self, from: data) {
                 DispatchQueue.main.async {
                     self.clothingDM = decodedResponse
                 }
@@ -71,7 +71,7 @@ class ProductViewModel: ObservableObject {
                     return
                 }
                 
-                if let decodedResponse = try? JSONDecoder().decode([ProductDataModel].self, from: data) {
+                if let decodedResponse = try? JSONDecoder().decode([ClothDataModel].self, from: data) {
                     DispatchQueue.main.async {
                         self.clothingDM = decodedResponse
                     }
@@ -84,7 +84,7 @@ class ProductViewModel: ObservableObject {
             let formattedCategory = category.capitalized
             let formattedSubcategory = subcategory.lowercased()
 
-            let dataURL = "http://localhost:3000/api/products/\(formattedCategory)/\(formattedSubcategory)"
+            let dataURL = "http://localhost:3030/api/Products/\(formattedCategory)/\(formattedSubcategory)"
 
             guard let url = URL(string: dataURL) else {
                 print("Invalid URL")
@@ -93,9 +93,9 @@ class ProductViewModel: ObservableObject {
 
             URLSession.shared.dataTask(with: url) { data, response, error in
                 if let data = data, error == nil,
-                   let decodedResponse = try? JSONDecoder().decode([ProductDataModel].self, from: data) {
+                   let decodedResponse = try? JSONDecoder().decode([ClothDataModel].self, from: data) {
                     DispatchQueue.main.async {
-                        self.productDM = decodedResponse
+                        self.clothingDM = decodedResponse
                     }
                 } else {
                     print("Fetch error: \(error?.localizedDescription ?? "Unknown error")")

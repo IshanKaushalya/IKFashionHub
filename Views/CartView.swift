@@ -7,12 +7,54 @@
 
 import SwiftUI
 
-struct CartView: View {
+struct CartVeiw: View {
+    
+    @EnvironmentObject var cartVM : CartVeiwModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List{
+            if cartVM.products.count > 0 {
+                ForEach(cartVM.products, id: \.id) {
+                    product in
+                    ProductRow(product: product)
+  
+                }
+                
+            }else{
+                Text("Your cart is empty!!!")
+            }
+            
+            
+        }.navigationTitle(Text("My Cart"))
+            .padding(.top)
+        
+        HStack{
+            Text("your cart total is")
+            Spacer()
+            Text("$ \(cartVM.total, specifier: "%.2f")").bold()
+        }
+        .padding()
+        
+        
+        
+        Button(action:{
+            //loginVM.verifyLogin()
+        },label: {
+            RoundedRectangle(cornerRadius: 10).frame(height:50)
+                .padding(.horizontal,47)
+                .padding(.top)
+                .foregroundColor(.black)
+                }).overlay{
+                    Text("Checkout").bold()
+                        .foregroundStyle(.white)
+                        .padding(.top)
+                }
+        
     }
+    
 }
 
 #Preview {
-    CartView()
+    CartVeiw()
+        .environmentObject(CartVeiwModel())
 }

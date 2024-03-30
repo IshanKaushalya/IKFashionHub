@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2719882BB859AB005D7738 /* CartList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2719872BB859AB005D7738 /* CartList.swift */; };
 		1B48AAEE2BB567B000F3A9E5 /* CartIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAED2BB567B000F3A9E5 /* CartIcon.swift */; };
 		1B48AAF02BB56B2A00F3A9E5 /* ClothingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAEF2BB56B2A00F3A9E5 /* ClothingIcon.swift */; };
 		1B48AAF22BB56DBE00F3A9E5 /* ClothDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAF12BB56DBE00F3A9E5 /* ClothDataModel.swift */; };
 		1B48AAF42BB5762C00F3A9E5 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAF32BB5762C00F3A9E5 /* CartViewModel.swift */; };
 		1B48AAF62BB58C8800F3A9E5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAF52BB58C8800F3A9E5 /* HomeView.swift */; };
-		1B48AAF82BB58DB900F3A9E5 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAF72BB58DB900F3A9E5 /* ProductViewModel.swift */; };
+		1B48AAF82BB58DB900F3A9E5 /* ClothViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAF72BB58DB900F3A9E5 /* ClothViewModel.swift */; };
 		1B48AAFA2BB58F3800F3A9E5 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAF92BB58F3800F3A9E5 /* CartModel.swift */; };
 		1B48AAFC2BB58F6C00F3A9E5 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B48AAFB2BB58F6C00F3A9E5 /* CartView.swift */; };
 		424907B22BAE11F1000733A6 /* IKFashionHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424907B12BAE11F1000733A6 /* IKFashionHubApp.swift */; };
@@ -48,12 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B2719872BB859AB005D7738 /* CartList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartList.swift; sourceTree = "<group>"; };
 		1B48AAED2BB567B000F3A9E5 /* CartIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartIcon.swift; sourceTree = "<group>"; };
 		1B48AAEF2BB56B2A00F3A9E5 /* ClothingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingIcon.swift; sourceTree = "<group>"; };
 		1B48AAF12BB56DBE00F3A9E5 /* ClothDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothDataModel.swift; sourceTree = "<group>"; };
 		1B48AAF32BB5762C00F3A9E5 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		1B48AAF52BB58C8800F3A9E5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		1B48AAF72BB58DB900F3A9E5 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		1B48AAF72BB58DB900F3A9E5 /* ClothViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothViewModel.swift; sourceTree = "<group>"; };
 		1B48AAF92BB58F3800F3A9E5 /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		1B48AAFB2BB58F6C00F3A9E5 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		424907AE2BAE11F1000733A6 /* IKFashionHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKFashionHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,7 @@
 			children = (
 				1B48AAED2BB567B000F3A9E5 /* CartIcon.swift */,
 				1B48AAEF2BB56B2A00F3A9E5 /* ClothingIcon.swift */,
+				1B2719872BB859AB005D7738 /* CartList.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -196,7 +199,7 @@
 				424907DF2BAE12FF000733A6 /* LoginViewModel.swift */,
 				424907E72BAE1E44000733A6 /* RegisterViewModel.swift */,
 				1B48AAF32BB5762C00F3A9E5 /* CartViewModel.swift */,
-				1B48AAF72BB58DB900F3A9E5 /* ProductViewModel.swift */,
+				1B48AAF72BB58DB900F3A9E5 /* ClothViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -332,13 +335,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B48AAFA2BB58F3800F3A9E5 /* CartModel.swift in Sources */,
-				1B48AAF82BB58DB900F3A9E5 /* ProductViewModel.swift in Sources */,
+				1B48AAF82BB58DB900F3A9E5 /* ClothViewModel.swift in Sources */,
 				1B48AAF42BB5762C00F3A9E5 /* CartViewModel.swift in Sources */,
 				1B48AAF02BB56B2A00F3A9E5 /* ClothingIcon.swift in Sources */,
 				1B48AAF62BB58C8800F3A9E5 /* HomeView.swift in Sources */,
 				424907E42BAE1335000733A6 /* LoginModel.swift in Sources */,
 				424907E82BAE1E44000733A6 /* RegisterViewModel.swift in Sources */,
 				424907B42BAE11F1000733A6 /* ContentView.swift in Sources */,
+				1B2719882BB859AB005D7738 /* CartList.swift in Sources */,
 				1B48AAF22BB56DBE00F3A9E5 /* ClothDataModel.swift in Sources */,
 				424907B22BAE11F1000733A6 /* IKFashionHubApp.swift in Sources */,
 				1B48AAEE2BB567B000F3A9E5 /* CartIcon.swift in Sources */,
