@@ -12,7 +12,7 @@ struct ClothDataModel: Codable, Identifiable {
     var id: Int
     var productName: String
     var image: String
-    var product_description: String
+    var productDescription: String
     var price: Double
     var category: String
     var subCategory: String
